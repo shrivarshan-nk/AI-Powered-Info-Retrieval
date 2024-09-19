@@ -2,7 +2,7 @@ streamlit
 transformers
 torch
 requests
-spacy download en_core_web_sm
+spacy en_core_web_sm
 scikit-learn
 numpy
 
