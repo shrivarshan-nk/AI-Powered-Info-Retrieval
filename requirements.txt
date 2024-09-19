@@ -1,6 +1,5 @@
 streamlit
 transformers
-pipeline
 torch
 requests
 scikit-learn
