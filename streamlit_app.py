@@ -4,7 +4,7 @@ from transformers import pipeline
 #import spacy
 
 # Initialize the summarizer pipeline using Hugging Face Transformers
-summarizer = pipeline("summarization", model="facebook/bart-large-cnn")
+summarizer = pipeline("summarization", model="distilbart-cnn-12-6")
 
 # Load spaCy model
 #nlp = spacy.load("en_core_web_sm")
