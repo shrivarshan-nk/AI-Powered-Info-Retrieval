@@ -1,13 +1,13 @@
 import streamlit as st
 import requests
 from transformers import pipeline
-import spacy
+#import spacy
 
 # Initialize the summarizer pipeline using Hugging Face Transformers
 summarizer = pipeline("summarization", model="facebook/bart-large-cnn")
 
 # Load spaCy model
-nlp = spacy.load("en_core_web_sm")
+#nlp = spacy.load("en_core_web_sm")
 
 # Function to perform search using Google Custom Search API
 def perform_search(query):
@@ -38,15 +38,7 @@ def rank_sources(results):
 
 # Function to extract related topics using spaCy
 def extract_related_topics(query_list):
-    combined_query = " ".join(query_list)
-    doc = nlp(combined_query)
-    
-    # Extract keywords or named entities
-    keywords = [token.text for token in doc if token.is_alpha and not token.is_stop]
-    entities = [ent.text for ent in doc.ents]
-    
-    # Combine and deduplicate keywords and entities
-    related_topics = list(set(keywords + entities))
+    related_topics = ["AI","ML"]
     related_topics.insert(0,"Deep Learning")
     return related_topics[:3]  # Limit to 3 related topics
 
